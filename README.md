@@ -1,4 +1,3 @@
-
 # moneyney 📈
 
 **moneyney** 是一款轻量级的个人基金持仓管理助手。基于 React 18 与 Tailwind CSS 构建，旨在通过简洁直观的界面，帮助投资者轻松完成持仓录入、净值同步、收益分析及定投规划。
@@ -45,6 +44,40 @@ pnpm dev
 
 ```bash
 pnpm build
+```
+
+## 🌐 部署
+
+### Cloudflare Pages（推荐）
+
+本项目已完整配置 Cloudflare Pages + Workers 支持，提供：
+
+- ✅ 免费且慷慨的额度
+- ✅ 全球 CDN 加速
+- ✅ 自动 HTTPS
+- ✅ 无限带宽
+
+详见 **[Cloudflare 部署指南](./CLOUDFLARE_DEPLOY.md)**
+
+快速部署命令：
+
+```bash
+# 安装 Wrangler CLI
+pnpm add -g wrangler
+
+# 登录并部署
+wrangler login
+pnpm pages:deploy
+```
+
+**从 Vercel 迁移？** 查看 **[迁移指南](./MIGRATE_TO_CLOUDFLARE.md)**
+
+### Vercel
+
+项目也支持 Vercel 部署（已配置 `vercel.json`）：
+
+```bash
+vercel --prod
 ```
 
 ## 📖 使用提示
